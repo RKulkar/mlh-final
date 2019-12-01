@@ -51,8 +51,8 @@ html {
 .mlh-logo {
   background: url("/img/mlh-logo-white.svg") no-repeat;
   background-size: contain;
-  width: 100px;
-  height: 50px
+  width: 200px;
+  height: 100px
 }
 
 .azure-logo {
