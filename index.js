@@ -21,7 +21,7 @@ const defaultPassword = process.env.HACKERLOG_PASSWORD || 'P@ssw0rd!';
 const updateSchema = mongoose.Schema({
   name: { type: String, required: true },
   update: { type: String, required: true },
-  branch: {type: String, required: true}
+ // branch: {type: String, required: true}
 }, {
   timestamps: true
 });
@@ -45,11 +45,11 @@ app.get('/', (req, res) => {
 
 // Posting update
 app.post('/update', (req, res) => {
-  const { body: { name, update, password, branch } } = req;
-  if (!name || !update || !branch) {
+  const { body: { name, update, password, /*branch*/ } } = req;
+  if (!name || !update || /*!branch*/) {
     res.redirect('/error');
   } else if (password==defaultPassword) {
-    const userUpdate = new Update({ name, update, branch });
+    const userUpdate = new Update({ name, update, /*branch*/ });
     userUpdate.save().then(() => {
       // do a redirect here
       res.redirect("/");
