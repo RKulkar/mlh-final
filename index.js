@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 // Posting update
 app.post('/update', (req, res) => {
   const { body: { name, update, password, /*branch*/ } } = req;
-  if (!name || !update || /*!branch*/) {
+  if (!name || !update  /*!branch*/) {
     res.redirect('/error');
   } else if (password==defaultPassword) {
     const userUpdate = new Update({ name, update, /*branch*/ });
