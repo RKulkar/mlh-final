@@ -43,9 +43,9 @@ html {
 }
 
 .page-button.active {
-  background: #78cdff;
-  color: rgb(0, 0, 0);
-  border: 1px rgb(253, 3, 3) solid;
+  background: #818181;
+  color: white;
+  border: 1px white solid;
 }
 
 .mlh-logo {
